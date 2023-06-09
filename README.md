@@ -1,2 +1,2 @@
 # Strivers-SDE-Sheet-Challenge-60
-Set Matix Zeros https://www.codingninjas.com/codestudio/problems/set-matrix-zeros_8230862?challengeSlug=striver-sde-challenge
+https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
