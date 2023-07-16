@@ -17,7 +17,7 @@ int lcs(string s, string t)
   return f(0,0,s,t,dp);
 }
 
-//Tabulation Top Down Approach
+//Tabulation Bottom Up Approach
 int lcs(string s, string t)
 {
 	 int n=s.length(),m=t.length();
