@@ -16,3 +16,22 @@ int lcs(string s, string t)
   vector<vector<int>>dp(n,vector<int>(m,-1));
   return f(0,0,s,t,dp);
 }
+
+//Tabulation Top Down Approach
+int lcs(string s, string t)
+{
+	 int n=s.length(),m=t.length();
+  vector<vector<int>>dp(n+1,vector<int>(m+1,0));
+
+  for(int i=n-1;i>=0;i--){
+	  for(int j=m-1;j>=0;j--){
+		  if(s[i]==t[j]){
+				dp[i][j]=1+dp[i+1][j+1];
+          } 
+		  else {
+            dp[i][j] = max(dp[i][j + 1],dp[i + 1][j]);
+          }
+          }
+  }
+  return dp[0][0];
+}
