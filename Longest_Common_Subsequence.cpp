@@ -35,3 +35,24 @@ int lcs(string s, string t)
   }
   return dp[0][0];
 }
+// space optimised using only cur and next vector;
+#include <bits/stdc++.h> 
+
+int lcs(string s, string t)
+{
+	 int n=s.length(),m=t.length();
+  vector<int>cur(m+1,0),next(m+1,0);
+
+  for(int i=n-1;i>=0;i--){
+	  for(int j=m-1;j>=0;j--){
+		  if(s[i]==t[j]){
+				cur[j]=1+next[j+1];
+          } 
+		  else {
+            cur[j] = max(cur[j + 1],next[j]);
+          }
+          }
+		  next=cur;
+  }
+  return cur[0];
+}
